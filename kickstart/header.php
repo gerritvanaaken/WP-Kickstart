@@ -14,8 +14,9 @@
   <link href="<?php bloginfo('template_directory') ?>/css/print.css" rel="stylesheet" media="print" type="text/css" />
   <script>document.documentElement.className += " js";</script>
   <script src="<?php bloginfo('template_directory') ?>/js/html5.js"></script>
-  <script src="<?php bloginfo('template_directory') ?>/js/jquery-1.5.min.js"></script>
+  <script src="<?php bloginfo('template_directory') ?>/js/jquery-1.5.1.min.js"></script>
   <script src="<?php bloginfo('template_directory') ?>/js/domscript.js"></script>
+  <meta name="robots" content="index, follow" />
   <?php wp_head() ?>
 </head>
 
