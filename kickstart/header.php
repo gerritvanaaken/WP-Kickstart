@@ -21,7 +21,7 @@
 </head>
 
 <!--[if lt IE 7]><body <?php body_class('ie7 ie6'); ?>><![endif]-->
-<!--[if IE 7]><body <?php body_class('ie6'); ?>><![endif]-->
+<!--[if IE 7]><body <?php body_class('ie7'); ?>><![endif]-->
 <!--[if gt IE 7]><body <?php body_class(); ?>><![endif]-->
 <!--[if !IE]><!--><body <?php body_class(); ?>><!-- <![endif]-->
 
