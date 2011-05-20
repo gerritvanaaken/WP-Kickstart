@@ -10,5 +10,11 @@ function kickstart_widgets_init() {
   ));  
 }
 add_action( 'init', 'kickstart_widgets_init' );
+
+// Auto-discovery feed in header
 add_theme_support('automatic-feed-links');
+
+// Article image support. More info here: http://codex.wordpress.org/Post_Thumbnails
+add_theme_support('post-thumbnails'); 
+
 ?>
