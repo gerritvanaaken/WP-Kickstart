@@ -17,6 +17,7 @@
   <script src="<?php bloginfo('template_directory') ?>/js/jquery-1.6.1.min.js"></script>
   <script src="<?php bloginfo('template_directory') ?>/js/domscript.js"></script>
   <meta name="robots" content="index, follow" />
+  <link rel="shortcut icon" href="<?php bloginfo('template_directory') ?>/img/favicon.ico" type="image/vnd.microsoft.icon" /> 
   <?php wp_head() ?>
 </head>
 
