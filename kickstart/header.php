@@ -14,9 +14,8 @@
   <link href="<?php bloginfo('template_directory') ?>/print.css" rel="stylesheet" media="print" type="text/css" />
   <script>document.documentElement.className += " js";</script>
   <script src="<?php bloginfo('template_directory') ?>/js/iepp.js"></script>
-  <script src="<?php bloginfo('template_directory') ?>/js/jquery-1.7.min.js"></script>
+  <script src="<?php bloginfo('template_directory') ?>/js/jquery-1.7.1.min.js"></script>
   <script src="<?php bloginfo('template_directory') ?>/js/domscript.js"></script>
-  <meta name="robots" content="index, follow" />
   <link rel="shortcut icon" href="<?php bloginfo('template_directory') ?>/img/favicon.ico" type="image/vnd.microsoft.icon" /> 
   <?php wp_head() ?>
 </head>
