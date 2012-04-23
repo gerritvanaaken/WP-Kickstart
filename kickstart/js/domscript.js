@@ -1,5 +1,5 @@
-function dom_init() {
+$(function(){
 
-// Do some jQuery action here
+	// Do some jQuery action here
 
-}
+});
