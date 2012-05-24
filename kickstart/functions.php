@@ -26,6 +26,9 @@ add_action('wp_enqueue_scripts', 'kickstart_scripts_init');
 add_theme_support('automatic-feed-links');
 
 // Article image support. http://codex.wordpress.org/Post_Thumbnails
-add_theme_support('post-thumbnails'); 
+add_theme_support('post-thumbnails');
+
+// Remove generator-tag for security reasons
+remove_action('wp_head', 'wp_generator');
 
 ?>
