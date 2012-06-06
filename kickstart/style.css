@@ -11,7 +11,7 @@ Version: 0.7 | Release: 2012-04-23
 	No rights reserved.
 */
 
-@import url(css/normalize.css);
+@import url(css/reset_some_things.css);
 
 
 /* -------------------------------- Default WP classes */
