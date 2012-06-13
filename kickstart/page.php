@@ -5,7 +5,6 @@
 	<h2><?php the_title(); ?></h2>
 	<?php the_content(); ?>
 </div>
-<?php comments_template(); ?>
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
