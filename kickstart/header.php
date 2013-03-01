@@ -21,3 +21,4 @@
 <!--[if !IE]><!--><body <?php body_class(); ?>><!-- <![endif]-->
 
 
+<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>

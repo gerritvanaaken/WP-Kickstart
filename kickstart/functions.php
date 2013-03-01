@@ -40,6 +40,9 @@ add_theme_support('automatic-feed-links');
 // Article image support. http://codex.wordpress.org/Post_Thumbnails
 add_theme_support('post-thumbnails');
 
+// Let users choose the primary menu
+register_nav_menu( 'primary', __( 'Primary Menu', 'kickstart' ) );
+
 // Remove generator-tag for security reasons
 remove_action('wp_head', 'wp_generator');
 
