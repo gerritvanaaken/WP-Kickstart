@@ -27,6 +27,7 @@ add_action( 'wp_enqueue_scripts', 'kickstart_scripts_init' );
 
 function kickstart_styles_init() {
 	// Add main stylesheets
+	wp_enqueue_style( 'kickstart-style-reset', get_template_directory_uri() . '/css/mini-reset.css' );
 	wp_enqueue_style( 'kickstart-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'kickstart-style-print', get_template_directory_uri() . '/css/print.css', array(), false, 'print' );
 }
@@ -42,6 +43,8 @@ add_theme_support('post-thumbnails');
 // Remove generator-tag for security reasons
 remove_action('wp_head', 'wp_generator');
 
+// Add editor style
+add_editor_style();
 
 
 ?>
