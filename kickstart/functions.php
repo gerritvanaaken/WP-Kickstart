@@ -1,4 +1,5 @@
 <?php
+
 function kickstart_widgets_init() {
 	register_sidebar(array(
 		'name' => 'Widgets',
@@ -11,16 +12,26 @@ function kickstart_widgets_init() {
 }
 add_action( 'init', 'kickstart_widgets_init' );
 
+
 function kickstart_scripts_init() {
 	// Make sure html5shiv is only included once
-	wp_enqueue_script('html5shiv', get_template_directory_uri().'/js/html5shiv.js');
+	wp_enqueue_script( 'html5shiv', get_template_directory_uri() . '/js/html5shiv.js', array(), '1.6.2' );
 	
 	// Register jQuery as a dependency of domscript.js
-	wp_deregister_script('jquery');
-	wp_register_script('jquery', get_template_directory_uri().'/js/jquery-1.7.2.min.js');
-	wp_enqueue_script('domscript', get_template_directory_uri().'/js/domscript.js', array('jquery'));
+	wp_deregister_script( 'jquery' );
+	wp_register_script( 'jquery', get_template_directory_uri() . '/js/jquery-1.9.1.min.js', array(), '1.9.1' );
+	wp_enqueue_script( 'domscript', get_template_directory_uri() . '/js/domscript.js', array( 'jquery' ) );
 }
-add_action('wp_enqueue_scripts', 'kickstart_scripts_init');
+add_action( 'wp_enqueue_scripts', 'kickstart_scripts_init' );
+
+
+function kickstart_styles_init() {
+	// Add main stylesheets
+	wp_enqueue_style( 'kickstart-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'kickstart-style-print', get_template_directory_uri() . '/css/print.css', array(), false, 'print' );
+}
+add_action( 'wp_enqueue_scripts', 'kickstart_styles_init' );
+
 
 // Auto-discovery feed in header
 add_theme_support('automatic-feed-links');
@@ -30,5 +41,7 @@ add_theme_support('post-thumbnails');
 
 // Remove generator-tag for security reasons
 remove_action('wp_head', 'wp_generator');
+
+
 
 ?>
