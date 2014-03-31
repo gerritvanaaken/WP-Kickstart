@@ -1,5 +1,6 @@
 <?php
 
+// Register Widget area(s)
 function kickstart_widgets_init() {
 	register_sidebar(array(
 		'name' => 'Widgets',
@@ -13,13 +14,21 @@ function kickstart_widgets_init() {
 add_action( 'init', 'kickstart_widgets_init' );
 
 
+// Register Menu location(s)
+register_nav_menus( array(
+	'main_menu' => __( 'Main Menu', 'kickstart' )
+	// ,'footer_menu' => __( 'Footer Menu', 'kickstart' )
+) );
+
+
+
 function kickstart_scripts_init() {
 	// Make sure html5shiv is only included once
-	wp_enqueue_script( 'html5shiv', get_template_directory_uri() . '/js/html5shiv.js', array(), '1.6.2' );
+	wp_enqueue_script( 'html5shiv', get_template_directory_uri() . '/js/html5shiv-printshiv.js', array(), '3.7.0' );
 	
 	// Register jQuery as a dependency of domscript.js
 	wp_deregister_script( 'jquery' );
-	wp_register_script( 'jquery', get_template_directory_uri() . '/js/jquery-1.9.1.min.js', array(), '1.9.1' );
+	wp_register_script( 'jquery', get_template_directory_uri() . '/js/jquery-1.9.1.min.js', array(), '1.11.0' );
 	wp_enqueue_script( 'domscript', get_template_directory_uri() . '/js/domscript.js', array( 'jquery' ) );
 }
 add_action( 'wp_enqueue_scripts', 'kickstart_scripts_init' );
@@ -39,9 +48,6 @@ add_theme_support('automatic-feed-links');
 
 // Article image support. http://codex.wordpress.org/Post_Thumbnails
 add_theme_support('post-thumbnails');
-
-// Let users choose the primary menu
-register_nav_menu( 'primary', __( 'Primary Menu', 'kickstart' ) );
 
 // Remove generator-tag for security reasons
 remove_action('wp_head', 'wp_generator');
