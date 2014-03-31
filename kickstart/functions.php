@@ -3,7 +3,7 @@
 // Register Widget area(s)
 function kickstart_widgets_init() {
 	register_sidebar(array(
-		'name' => 'Widgets',
+		'name' => __('Widgets', 'kickstart'),
 		'id' => 'widgets',
 		'before_widget' => '<div id="%1$s" class="box %2$s">',
 		'after_widget' => '</div>',
