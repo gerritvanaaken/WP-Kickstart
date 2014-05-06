@@ -28,7 +28,7 @@ function kickstart_scripts_init() {
 	
 	// Register jQuery as a dependency of domscript.js
 	wp_deregister_script( 'jquery' );
-	wp_register_script( 'jquery', get_template_directory_uri() . '/js/jquery-1.9.1.min.js', array(), '1.11.0' );
+	wp_register_script( 'jquery', get_template_directory_uri() . '/js/jquery-1.11.0.min.js', array(), '1.11.0' );
 	wp_enqueue_script( 'domscript', get_template_directory_uri() . '/js/domscript.js', array( 'jquery' ) );
 }
 add_action( 'wp_enqueue_scripts', 'kickstart_scripts_init' );
