@@ -80,9 +80,3 @@ a img.aligncenter {
     margin: 0;
     padding: 0 4px 5px;
 }
-
-/* -------------------------------- Internet Explorer Fixes */
-
-.ie7 .element { } /* applies to IE 7 and IE 6 */
-
-.ie6 .element { } /* applies to IE 6 only */

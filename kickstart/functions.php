@@ -7,8 +7,8 @@ function kickstart_widgets_init() {
 		'id' => 'widgets',
 		'before_widget' => '<div id="%1$s" class="box %2$s">',
 		'after_widget' => '</div>',
-		'before_title' => '<h2>',
-		'after_title' => '</h2>'
+		'before_title' => '<h3>',
+		'after_title' => '</h3>'
 	));  
 }
 add_action( 'init', 'kickstart_widgets_init' );
@@ -24,11 +24,12 @@ register_nav_menus( array(
 
 function kickstart_scripts_init() {
 	// Make sure html5shiv is only included once
-	wp_enqueue_script( 'html5shiv', get_template_directory_uri() . '/js/html5shiv-printshiv.js', array(), '3.7.0' );
+	wp_enqueue_script( 'html5shiv', get_template_directory_uri() . '/js/html5shiv-3.7.2.js', array(), '3.7.2' );
 	
 	// Register jQuery as a dependency of domscript.js
 	wp_deregister_script( 'jquery' );
-	wp_register_script( 'jquery', get_template_directory_uri() . '/js/jquery-1.11.0.min.js', array(), '1.11.0' );
+	wp_register_script( 'jquery', get_template_directory_uri() . '/js/jquery-1.11.2.min.js', array(), '1.11.2' );
+	// wp_register_script( 'jquery', get_template_directory_uri() . '/js/jquery-2.1.3.min.js', array(), '2.1.3' );
 	wp_enqueue_script( 'domscript', get_template_directory_uri() . '/js/domscript.js', array( 'jquery' ) );
 }
 add_action( 'wp_enqueue_scripts', 'kickstart_scripts_init' );
@@ -48,6 +49,8 @@ add_theme_support('automatic-feed-links');
 
 // Article image support. http://codex.wordpress.org/Post_Thumbnails
 add_theme_support('post-thumbnails');
+// Add custom image sizes http://codex.wordpress.org/Function_Reference/add_image_size
+add_image_size( 'kickstartImageSize', 256, 256, true ); // 256 * 256 pixels, cropped
 
 // Remove generator-tag for security reasons
 remove_action('wp_head', 'wp_generator');

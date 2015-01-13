@@ -2,7 +2,7 @@
 Theme Name: Kickstart for WordPress
 Description: small framework for quickly getting started with your wordpress theme development
 Author: Gerrit van Aaken
-Version: 0.7 | Release: 2012-04-23
+Version: 0.8 | Release: 2015-01-13
 	based upon:
 	HTML/CSS/JS-Kickstart
 	(small framework for quickly getting started with your web frontend development)
@@ -20,12 +20,12 @@ Version: 0.7 | Release: 2012-04-23
 
 .alignleft {
 	float: left;
-	margin: 0 15px 15px 0;
+	margin: 0 1em 1em 0;
 }
 
 .alignright {
 	float: right;
-	margin: 0 0 15px 15px;
+	margin: 0 0 1em 1em;
 }
 
 .wp-caption {
@@ -37,8 +37,21 @@ Version: 0.7 | Release: 2012-04-23
 .wp-caption p.wp-caption-text {
 }
 
-/* -------------------------------- Internet Explorer Fixes */
+/* ----------------------------------------------------- tabletish screens */
 
-.ie7 .element { } /* applies to IE 7 and IE 6 */
 
-.ie6 .element { } /* applies to IE 6 only */
+/* ----------------------------------------------------- smartphonish screens */
+@media only screen and (max-width: 767px) {
+
+}
+
+/* ----------------------------------------------------- desktopish screens */
+@media only screen and (min-width: 1024px) {
+
+}
+
+/* -------------------------------- Browser specific CSS */
+
+.js .element { } /* apply only on JavaScript enabled browsers */
+.ie8 .element { } /* apply only on Internet Explorer 8 */
+.ie9 .element { } /* apply only on Internet Explorer 9 */

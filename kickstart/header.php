@@ -2,6 +2,7 @@
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo('charset'); ?>" />
+	<meta content="width=device-width, initial-scale=1" name="viewport">
 	<title><?php
 		global $page, $paged;
 		wp_title('|', true, 'right');
@@ -15,9 +16,8 @@
 	<?php wp_head(); ?>
 </head>
 
-<!--[if lt IE 7]><body <?php body_class('ie7 ie6'); ?>><![endif]-->
-<!--[if IE 7]><body <?php body_class('ie7'); ?>><![endif]-->
-<!--[if gt IE 7]><body <?php body_class(); ?>><![endif]-->
+<!--[if IE 8]><body <?php body_class('ie8'); ?>><![endif]-->
+<!--[if IE 9]><body <?php body_class('ie9'); ?>><![endif]-->
 <!--[if !IE]><!--><body <?php body_class(); ?>><!-- <![endif]-->
 
 
